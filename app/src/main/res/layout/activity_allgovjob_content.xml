@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/primary"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_minus6sdp"
+            android:src="@drawable/gs_ashoka_chakra" />
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/gs_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backbutton"
+            android:fontFamily="@font/poppins_semibold"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="Job Details"
+            android:id="@+id/titlebar"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adMobView"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/qualification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:foreground="?selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_2sdp">
+            <RelativeLayout
+                android:id="@+id/nextbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp"
+                >
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/alarm"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/alarm"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+
+                    android:src="@drawable/gs_reminder"
+                   />
+
+                <LinearLayout
+                    android:id="@+id/dateinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/heading"
+                    android:orientation="horizontal"
+                    android:weightSum="5.0">
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.0"
+                        android:fontFamily="@font/poppins_extralight"
+                        android:text=""
+                        android:textColor="@color/txtlight"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/lastdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:fontFamily="@font/poppins_extralight"
+                        android:text=""
+                        android:textColor="@color/txtlight"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/descrption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/dateinfo"
+
+
+                    android:text=" "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:duration="1000">
+
+        <!-- Adding 3 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_placeholder_list" />
+
+            <include layout="@layout/item_placeholder_list" />
+
+            <include layout="@layout/item_placeholder_list" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <RelativeLayout
+        android:id="@+id/adMobView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:gravity="center" />
+</RelativeLayout>

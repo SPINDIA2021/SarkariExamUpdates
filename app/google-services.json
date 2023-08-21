@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1076751299899",
+    "project_id": "sarkari-exam-updates",
+    "storage_bucket": "sarkari-exam-updates.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076751299899:android:c6be0621688be7e90ab31e",
+        "android_client_info": {
+          "package_name": "com.gsbussiness.sarkariexamupdates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076751299899-d9kcu7jeheest39mjg2c01ckqta9q46g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMEbJ0c1EI13K7EIMS8jIam8To55hd5ZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076751299899-d9kcu7jeheest39mjg2c01ckqta9q46g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
